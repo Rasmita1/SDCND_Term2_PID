@@ -2,11 +2,11 @@
 The purpose of this project is to create a PID controller to drive a car smoothly and successfully with controlling steer and throttle input around the Udacity simulator .
 
 ## Implementation
-The P ('Proportional'), component had the most directly observable effect on the car's behavior. 
-                       It causes the car to steer proportional (and opposite) to the car's distance from the lane center (which is the CTE) or, desired path. An issue with just using a proportional controller is overshoot.
-The I ('Integral'), component counteracts a bias in the CTE which prevents the P-D controller from reaching the center line. 
-                    We integrate over the error and feed this signal back into our controller to compensate for any drfit in the vehicle. Here I believe, in this particular implementation the 'I' component serves to reduce the CTE around curves.
-The D ('Differential'), component counteracts the P component's tendency to ring and overshoot the center line. A properly tuned D parameter will cause the car to approach the center line smoothly without ringing.
+- The P ('Proportional'), component had the most directly observable effect on the car's behavior. It causes the car to steer proportional (and opposite) to the car's distance from the lane center (which is the CTE) or, desired path. An issue with just using a proportional controller is overshoot.
+- The I ('Integral'), component counteracts a bias in the CTE which prevents the P-D controller from reaching the center line.       We integrate over the error and feed this signal back into our controller to compensate for any drfit in the vehicle. Here I believe, in this particular implementation the 'I' component serves to reduce the CTE around curves.
+- The D ('Differential'), component counteracts the P component's tendency to ring and overshoot the center line. A properly tuned D parameter will cause the car to approach the center line smoothly without ringing.
+
+I have used the codes present in the the sdcnd and referred the open forum portals.
 
 ## Parameter / Behavior Tuning
 Here "Twiddle" algorithm is used to tune the coefficient for the P, I and D components of the controller.
@@ -20,7 +20,7 @@ This project involves the Term 2 Simulator which can be downloaded ([here](https
 4. make
 5. ./pid
 
-I have used the codes present in the the sdcnd and referred the open forum portals.
+
 
 
 
